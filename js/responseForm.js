@@ -32,8 +32,7 @@
             me.hasResponse(false);
 
             // send message
-            var url = "https://script.google.com/macros/s/AKfycbylBuCkhBdG3jH6H2h3T4cQPnF41X4_DXv275n1J5i75IQ_35Rz/exec";
-            //var url = "https://script.google.com/macros/s/AKfycbz9G0kaTHSeqSAatNdf3LOu_1mqnIK9o_zKz634sTJK/dev";
+            var url = "https://script.google.com/macros/s/AKfycbwsxEZYpqh4aieArLo03rQsf3UFln5oG1HM5UTgyhExwSmJkJI/exec";
             url += "?data=" + encodeURIComponent(data);
             $.ajaxSetup({ crossOrigin: true });
             $.ajax({
