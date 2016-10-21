@@ -1,4 +1,4 @@
-﻿(function (ns) {
+﻿(function(ns) {
     ns.responseForm = function me() {
         me.fullName = ko.observable();
         me.phone = ko.observable();
@@ -10,12 +10,43 @@
         me.hasResponse = ko.observable(false);
         me.responseMessage = ko.observable();
 
-        me.btn_click_submit = function () {
+        me.btn_click_submit = function() {
             // reset form
             me.hasError(false);
             me.hasResponse(false);
 
             // send message
+            $.ajax({
+                url: me.createUrl(),
+                method: "GET",
+                dataType: "jsonp",
+                success: function(args) {
+                    me.hasResponse(true);
+                    me.hasError(args.hasError);
+                    me.responseMessage(args.responseMessage);
+                    if (me.hasError()) {
+                        console.error(args);
+                    } else {
+                        console.log(args);
+                        me.clearForm();
+                    }
+                },
+                error: function(args) {
+                    me.hasResponse(true);
+                    me.hasError(true);
+                    me.responseMessage(args.statusText);
+                    console.error(args.statusText);
+                }
+            });
+        };
+        me.clearForm = function() {
+            me.fullName("");
+            me.phone("");
+            me.email("");
+            me.subject("");
+            me.message("");
+        };
+        me.createUrl = function() {
             var url = "https://script.google.com/macros/s/AKfycbwsxEZYpqh4aieArLo03rQsf3UFln5oG1HM5UTgyhExwSmJkJI/exec";
             url += "?source=" + encodeURIComponent("247up.nl");
             url += "&fullName=" + encodeURIComponent(me.fullName());
@@ -23,36 +54,13 @@
             url += "&email=" + encodeURIComponent(me.email());
             url += "&subject=" + encodeURIComponent(me.subject());
             url += "&message=" + encodeURIComponent(me.message());
-            $.ajaxSetup({ crossOrigin: true });
-            $.ajax({
-                crossDomain: true,
-                url: url,
-                method: "GET",
-                dataType: "jsonp",
-                success: function (args) {
-                    me.fullName("");
-                    me.phone("");
-                    me.email("");
-                    me.subject("");
-                    me.message("");
-
-                    me.hasError(args.hasError);
-                    me.hasResponse(true);
-                    me.responseMessage($.parseJSON(args).responseMessage);
-                },
-                error: function(args) {
-                    me.hasError(true);
-                    me.hasResponse(true);
-                    me.responseMessage(args.statusText);
-                    console.error(args.statusText);
-                }
-            });
-        }
-
+            return url;
+        };
         return me;
     }();
-  
-    $(document).ready(function() {
-        ko.applyBindings(ns.responseForm, $("#contactForm")[0]);
-    });
+
+    $(document)
+        .ready(function() {
+            ko.applyBindings(ns.responseForm, $("#contactForm")[0]);
+        });
 })(this);
