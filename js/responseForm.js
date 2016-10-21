@@ -11,29 +11,18 @@
         me.responseMessage = ko.observable();
 
         me.btn_click_submit = function () {
-            // get form data
-            var data = JSON.stringify({
-                source: "247up.nl",
-                fullName: me.fullName(),
-                phone: me.phone(),
-                email: me.email(),
-                subject: me.subject(),
-                message: me.message()
-            });
-
             // reset form
-            me.fullName("");
-            me.phone("");
-            me.email("");
-            me.subject("");
-            me.message("");
-            me.responseMessage("");
             me.hasError(false);
             me.hasResponse(false);
 
             // send message
             var url = "https://script.google.com/macros/s/AKfycbwsxEZYpqh4aieArLo03rQsf3UFln5oG1HM5UTgyhExwSmJkJI/exec";
-            url += "?data=" + encodeURIComponent(data);
+            url += "?source=" + encodeURIComponent("247up.nl");
+            url += "&fullName=" + encodeURIComponent(me.fullName());
+            url += "&phone=" + encodeURIComponent(me.phone());
+            url += "&email=" + encodeURIComponent(me.email());
+            url += "&subject=" + encodeURIComponent(me.subject());
+            url += "&message=" + encodeURIComponent(me.message());
             $.ajaxSetup({ crossOrigin: true });
             $.ajax({
                 crossDomain: true,
@@ -41,10 +30,15 @@
                 method: "GET",
                 dataType: "jsonp",
                 success: function (args) {
+                    me.fullName("");
+                    me.phone("");
+                    me.email("");
+                    me.subject("");
+                    me.message("");
+
                     me.hasError(args.hasError);
                     me.hasResponse(true);
-                    var o = $.parseJSON(args);
-                    me.responseMessage(o.responseMessage);
+                    me.responseMessage($.parseJSON(args).responseMessage);
                 },
                 error: function(args) {
                     me.hasError(true);
