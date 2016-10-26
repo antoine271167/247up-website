@@ -50,7 +50,7 @@ var toggle_nav_container = function() {
 // the div on the page whose ID matches said value. This only works if you use 
 // a consistent naming scheme for the navbar anchors and div IDs
 var gotoByScroll = function() {
-    $(".m_nav_item a")
+    $("div .m_nav_item a, .m_nav_item_a")
         .on("click",
             function(e) {
                 e.preventDefault();
