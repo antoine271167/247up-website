@@ -59,31 +59,30 @@ body {
     padding: 1em 0;
     border-bottom: 1px dashed #fff;
 }
-.w3ls-banner-left-info h4,.social-info h4{
+.w3ls-banner-left-info h4, .social-info h4 {
     font-size: 1.2em;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    /*font-family: 'Roboto Slab', serif;*/
     color: #FFFFFF;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
 }
-.w3ls-banner-left-info p{
+.w3ls-banner-left-info p {
     font-size: .9em;
     margin: 1em 0 0 0;
     color: #cecece;
 }
-.w3ls-banner-left-info p a{
+.w3ls-banner-left-info p a {
     font-size: .9em;
     margin: 1em 0 0 0;
     color: #cecece;
 	text-decoration:none;
 }
-.w3ls-banner-left-info p a:hover{
+.w3ls-banner-left-info p a:hover {
 	color:#00C6FF;
 }
-.w3ls-banner-left-info:nth-child(5){
+.w3ls-banner-left-info:nth-child(5) {
 	border:none;
 }
 .banner-right-img{
@@ -94,18 +93,18 @@ body {
     width: 100%;
     border: solid 8px #ffffff;
 }
-.banner-right-info{
+.banner-right-info {
     float: right;
     width: 65%;
 }
-.banner-right-info h2{
+.banner-info h2, .banner-right-info h2 {
     color: #FFFFFF;
     font-size: 1em;
     font-weight: 600;
     margin: 0;
     line-height: 1.5em;
 }
-.banner-right-info p{
+.banner-info p, .banner-right-info p {
 	color:#cecece;
 	font-size:.9em;
 	margin:1em 0 0 0;
@@ -244,7 +243,7 @@ body {
 }
 /*-- //banner --*/
 /*-- about --*/
-.about,.statistics,.experience,.feedback,.projects,.contact{
+.about,.statistics,.experience,.download,.projects,.contact{
     padding: 4em 0;
 }
 .wthree-about-left h3,.wthree-about-right h3,.w3-agileits-statistics-heading h3{
@@ -537,17 +536,17 @@ body {
 	color: #FFFFFF;
 }
 /*-- //experience --*/
-/*-- feedback --*/
-.feedback{
+/*-- download --*/
+.download{
 	background:url(../images/3.jpg) no-repeat 0px 0px;
-	background:size:cover;
+    background-size: cover;
 }
-.feedback-top{
+.download-top{
     padding: 1em;
     background: rgba(255, 255, 255, 0.18);
 	position:relative;
 }
-.feedback-top:after {
+.download-top:after {
     content: '';
     position: absolute;
     top: 100%;
@@ -559,43 +558,43 @@ body {
     border-left: 9px solid transparent;
     transform: rotate(0deg);
 }
-.feedback-top p{
+.download-top p{
 	color:#FFFFFF;
 	font-size:.9em;
 	margin:0;
 	line-height:1.8em;
 }
-.feedback-img{
+.download-img{
     float: left;
     width: 28%;
 }
-.feedback-grids {
+.download-grids {
     margin: 2em auto 0;
     width: 55%;
 }
-.feedback-img img{
+.download-img img{
 	width:100%;
 }
-.feedback-info {
+.download-info {
     margin: 1em !important;
 }
-.feedback-img-info{
+.download-img-info{
     float: left;
     width: 50%;
     margin-left: .5em;
 }
-.feedback-img-info h5{
+.download-img-info h5{
     color: #00C6FF;
     font-size: 1em;
     margin: 0;
     font-weight: 600;
 }
-.feedback-img-info p{
+.download-img-info p{
     color: #cecece;
     font-size: .9em;
     margin: 0;
 }
-/*-- //feedback --*/
+/*-- //download --*/
 /*-- portfolio --*/
 .portfolio{
 	padding:4em 0;
@@ -880,10 +879,10 @@ body {
 	.m_nav_item a {
 		font-size: 1em !important;
 	}
-	.feedback-grids {
+	.download-grids {
 		width: 100%;
 	}
-	.feedback-top:after {
+	.download-top:after {
 		left: 10%;
 	}
 	.w3_tab_img_left {
@@ -979,7 +978,7 @@ body {
 	.banner {
 		padding: 1em 0 2em;
 	}
-	.about, .statistics, .experience, .feedback, .projects, .contact {
+	.about, .statistics, .experience, .download, .projects, .contact {
 		padding: 2em 0;
 	}
 	.agile-statistics-grid {

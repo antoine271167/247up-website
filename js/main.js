@@ -55,9 +55,6 @@ var gotoByScroll = function() {
             function(e) {
                 e.preventDefault();
                 $("html, body")
-                    .animate({
-                            scrollTop: $($(this).attr("href")).offset().top - 50
-                        },
-                        "slow");
+                    .animate({scrollTop: $($(this).attr("href")).offset().top + 1}, "slow");
             });
 };

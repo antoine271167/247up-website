@@ -28,12 +28,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- font -->
-    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
     <!-- //font -->
     <script src="js/jquery-1.11.1.min.js"></script>
-    <!--<script src="js/jquery.ajax-cross-origin.min.js"></script>-->
     <script src="js/bootstrap.js"></script>
     <script src="js/knockout-3.4.0.min.js"></script>
 
@@ -41,19 +38,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/responseForm.js"></script>
-    <!-- //menu -->
-    <script>
-        $(document)
-            .ready(function() {
-                $("#owl-demo")
-                    .owlCarousel({
-                        autoPlay: 3000,
-                        items: 3,
-                        itemsDesktop: [640, 5],
-                        itemsDesktopSmall: [414, 4]
-                    });
-            });
-    </script>
 </head>
 <body>
 <!-- banner -->
@@ -79,6 +63,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </li>
             <li class="m_nav_item" id="moble_nav_item_4">
                 <a href="#experience">Experience</a>
+            </li>
+            <li class="m_nav_item" id="moble_nav_item_5">
+                <a href="#download">Download</a>
             </li>
             <li class="m_nav_item" id="moble_nav_item_6">
                 <a href="#contact">Contact</a>
@@ -158,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </p>
                 </div>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>
@@ -224,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //about -->
 <!-- statistics -->
-<div class="jarallax statistics" id="statistics">
+<div class="statistics" id="statistics">
     <div class="container">
         <div class="w3-agileits-statistics-heading">
             <h3>My Statistics</h3>
@@ -247,17 +234,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="clearfix"> </div>
         </div>
-        <script src="js/jarallax.js"></script>
-        <script src="js/SmoothScroll.min.js"></script>
-        <script type="text/javascript">
-            /* init Jarallax */
-            $('.jarallax')
-                .jarallax({
-                    speed: 0.5,
-                    imgWidth: 1366,
-                    imgHeight: 768
-                })
-        </script>
     </div>
 </div>
 <!-- //statistics -->
@@ -394,97 +370,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!-- //experience -->
-<!-- feedback -->
-<div class="jarallax feedback">
+<!-- download -->
+<div class="download" id="download">
     <div class="container">
         <div class="w3-agileits-statistics-heading">
-            <h3>Clients Feedback</h3>
+            <h3>Downloads</h3>
         </div>
-        <div class="agileits-feedback-grids">
-            <div id="owl-demo" class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="feedback-info">
-                        <div class="feedback-top">
-                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
-                        </div>
-                        <div class="feedback-grids">
-                            <div class="feedback-img">
-                                <img src="images/f1.jpg" alt=""/>
-                            </div>
-                            <div class="feedback-img-info">
-                                <h5>Peter Parker</h5>
-                                <p>Vestibulum</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="feedback-info">
-                        <div class="feedback-top">
-                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
-                        </div>
-                        <div class="feedback-grids">
-                            <div class="feedback-img">
-                                <img src="images/f2.jpg" alt=""/>
-                            </div>
-                            <div class="feedback-img-info">
-                                <h5>Mary Jane</h5>
-                                <p>Vestibulum</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="feedback-info">
-                        <div class="feedback-top">
-                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
-                        </div>
-                        <div class="feedback-grids">
-                            <div class="feedback-img">
-                                <img src="images/f3.jpg" alt=""/>
-                            </div>
-                            <div class="feedback-img-info">
-                                <h5>Steven Wilson</h5>
-                                <p>Vestibulum</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="feedback-info">
-                        <div class="feedback-top">
-                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
-                        </div>
-                        <div class="feedback-grids">
-                            <div class="feedback-img">
-                                <img src="images/f4.jpg" alt=""/>
-                            </div>
-                            <div class="feedback-img-info">
-                                <h5>Peter Parker</h5>
-                                <p>Vestibulum</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
+        <div class="w3l-banner-grids">
+            <div class="col-md-6 w3ls-banner-right">
+                <div class="banner-info">
+                    <a href="docs/CV_Antoine_Geboers_UK_Short.docx" target="_blank">
+                        <img src="images/docx.png" style="float: left; margin-right: 25px;" />
+                        <h2>CV_Antoine_Geboers_UK_Short.docx</h2>
+                        <p>Short version of Antoine's CV. 14 pages, truncated at 2011. Language is UK.</p>
+                    </a>
                 </div>
             </div>
+            <div class="col-md-6 w3ls-banner-left">
+                <div class="banner-info">
+                    <a href="docs/CV_Antoine_Geboers_UK_Full.docx" target="_blank">
+                        <img src="images/docx.png" style="float: left; margin-right: 25px;" />
+                        <h2>CV_Antoine_Geboers_UK_Full.docx</h2>
+                        <p>Full version of Antoine's CV. 25 pages, language is UK.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
-        <script type="text/javascript">
-            /* init Jarallax */
-            $('.jarallax')
-                .jarallax({
-                    speed: 0.5,
-                    imgWidth: 1366,
-                    imgHeight: 768
-                })
-        </script>
-
     </div>
 </div>
-<!-- //feedback -->
+<!-- //download -->
 <!-- map -->
 <div class="map-grid">
     <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783" class="map" style="border: 0" allowfullscreen=""></iframe>-->
@@ -548,6 +463,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //copyright -->
 <script src="js/bars.js"></script>
-<script src="js/owl.carousel.js"></script>
 </body>
 </html>
