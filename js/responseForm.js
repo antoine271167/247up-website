@@ -49,11 +49,21 @@
         me.createUrl = function() {
             var url = "https://script.google.com/macros/s/AKfycbxkHbRnC3vCNziulyP5GG-5sME2b5q5-_9l3DgWMcYGtO39splv/exec";
             url += "?source=" + encodeURIComponent("247up.nl");
-            url += "&fullName=" + encodeURIComponent(me.fullName());
-            url += "&phone=" + encodeURIComponent(me.phone());
-            url += "&email=" + encodeURIComponent(me.email());
-            url += "&subject=" + encodeURIComponent(me.subject());
-            url += "&message=" + encodeURIComponent(me.message());
+            if (me.fullName()) {
+                url += "&fullName=" + encodeURIComponent(me.fullName());
+            }
+            if (me.phone()) {
+                url += "&phone=" + encodeURIComponent(me.phone());
+            }
+            if (me.email()) {
+                url += "&email=" + encodeURIComponent(me.email());
+            }
+            if (me.subject()) {
+                url += "&subject=" + encodeURIComponent(me.subject());
+            }
+            if (me.message()) {
+                url += "&message=" + encodeURIComponent(me.message());
+            }
             return url;
         };
         return me;
