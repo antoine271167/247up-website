@@ -47,7 +47,7 @@
             me.message("");
         };
         me.createUrl = function() {
-            var url = "https://script.google.com/macros/s/AKfycbwsxEZYpqh4aieArLo03rQsf3UFln5oG1HM5UTgyhExwSmJkJI/exec";
+            var url = "https://script.google.com/macros/s/AKfycbxkHbRnC3vCNziulyP5GG-5sME2b5q5-_9l3DgWMcYGtO39splv/exec";
             url += "?source=" + encodeURIComponent("247up.nl");
             url += "&fullName=" + encodeURIComponent(me.fullName());
             url += "&phone=" + encodeURIComponent(me.phone());
