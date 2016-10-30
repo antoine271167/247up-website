@@ -92,6 +92,7 @@ body {
 .banner-right-img img{
     width: 100%;
     border: solid 8px #ffffff;
+    margin-bottom: 10px;
 }
 .banner-right-info {
     float: right;
@@ -859,8 +860,11 @@ body {
 	}
 	.banner-right-img {
 		float: none;
-		width: 35%;
+		width: 100%;
 	}
+    .banner-right-img img {
+        width: 49%;
+    }
 	.banner-right-info {
 		float: none;
 		width: 100%;
@@ -984,9 +988,12 @@ body {
 		float: none;
 	}
 	.banner-right-img {
-		width: 36%;
+		width: 100%;
 		margin: 0 auto;
 	}
+    /*.banner-right-img img{
+        width: 49%;
+    }*/
 	.w3l-banner-grids {
 		margin: 2em 0 0 0;
 	}
@@ -1105,7 +1112,7 @@ body {
 		font-size: 2.3em !important;
 	}
 	.banner-right-img {
-		width: 60%;
+		width: 100%;
 	}
 	.w3ls-banner-right {
 		padding: 0;
