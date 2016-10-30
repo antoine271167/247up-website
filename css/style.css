@@ -675,10 +675,25 @@ body {
     -webkit-appearance: none;
 	outline: none;
 }
+.has-error input[type="text"],
+.has-error textarea {
+    color: red;
+    border-bottom: 1px solid red;
+}
+.has-error label {
+    color: red !important;
+}
 .contact textarea { 
 	min-height: 150px;
     resize: none;
 } 
+/* blockUI */
+.blockMsg h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* /blockUI */
 /*-- input-effect --*/
 .styled-input input:focus ~ label, .styled-input input:valid ~ label,.styled-input textarea:focus ~ label ,.styled-input textarea:valid ~ label{
     font-size: .9em;
